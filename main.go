@@ -9,7 +9,7 @@ import (
 func main() {
     p, _ := proxy.New(proxy.ProxyOptions{
         Balancer: func(req *http.Request) (string, error) {
-            return "https://udify.app", nil
+            return "https://cloud.dify.ai", nil
         },
     })
     http.ListenAndServe(":"+os.Getenv("PORT"), p)
